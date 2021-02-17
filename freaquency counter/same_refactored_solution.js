@@ -8,6 +8,8 @@ function same(arr1, arr2){
         frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1
     }
     for(let val of arr2){
+        console.log(`true or false ${frequencyCounter2[val] || 0}`);
+
         frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1        
     }
     console.log(frequencyCounter1);
