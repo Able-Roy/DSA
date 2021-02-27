@@ -1,0 +1,19 @@
+/*
+    function to check if a given string is palindrome or not
+*/
+function isPalindrome(str) {
+  if (str.length === 1) return true;
+  if (str.length === 2) {
+    return str[0] === str[1];
+  }
+  if (str[0] === str.slice(-1)) {
+    return isPalindrome(str.slice(1, -1));
+  }
+  return false;
+}
+console.log(isPalindrome("tacocat"));
+// isPalindrome('tacocat') // false
+// isPalindrome('foobar') // false
+// isPalindrome('tacocat') // true
+// isPalindrome('amanaplanacanalpanama') // true
+// isPalindrome('amanaplanacanalpandemonium') // false
