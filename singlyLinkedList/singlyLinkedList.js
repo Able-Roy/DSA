@@ -103,6 +103,43 @@ class SinglyLinkedList{
         }
         return false;
     }
+    remove(index){
+        if(index > this.length) return undefined;
+        if(index < 0) return undefined;
+
+        let prevNode = this.get(index - 1);
+        let currentNode = prevNode.next;
+        prevNode.next = currentNode.next;
+        currentNode = null;
+        return this;
+
+    }
+    remove(index){
+        if(index > this.length) return undefined;
+        if(index < 0) return undefined;
+        if(index === 0) return this.shift();
+        if(index === this.length) return this.pop();
+        let prevNode = this.get(index - 1);
+        let currentNode = prevNode.next;
+        prevNode.next = currentNode.next;
+        currentNode = null;
+        return this;
+
+    }    
+   reverce(){
+        let prev = null;
+        let cur =this.head;
+        let next = null;
+        this.tail = this.head;
+        while(cur != null){
+            next = cur.next;
+            cur.next = prev;
+            prev = cur;
+            cur = next;
+        }
+        this.head = prev;
+        return this;
+    }
 }
 
 
