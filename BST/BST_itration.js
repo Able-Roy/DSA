@@ -60,6 +60,22 @@ class BST {
         }
     }
   }
+  /*
+    function for level order traversal or BFS
+  */
+  BFS(){
+    let q = [];
+    let res = [];
+    let node;
+    q.push(this.root);
+    while(q.length){
+      node = q.shift();
+      res.push(node.value);
+      if(node.left) q.push(node);
+      if(node.right)q.push(node);
+    }
+    return res;
+  }
 }
 var tree = new BST();
 tree.insert(10)
