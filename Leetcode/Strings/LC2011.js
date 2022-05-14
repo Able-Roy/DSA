@@ -24,5 +24,6 @@ var finalValueAfterOperations = function(operations) {
     operations.forEach(opertaionHandler);
     return x;
 };
-console.log(finalValueAfterOperations(["--X","X++","X++"]))
-console.log(finalValueAfterOperations(["++X","++X","X++"]))
+
+//const finalValueAfterOperations = (operations) => operations.reduce((acc, curr) => curr[1] === "+" ? ++acc : --acc, 0)
+//https://leetcode.com/problems/final-value-of-variable-after-performing-operations/discuss/1520355/Javascript-One-line-Solution-Time%3A81-or-Mem%3A92-w-documentation
